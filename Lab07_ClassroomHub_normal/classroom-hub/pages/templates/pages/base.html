@@ -44,6 +44,9 @@
 
     {% if user.is_authenticated %}
         <a href="{% url 'pages:dashboard' %}">Dashboard</a>
+        {% if perms.pages.add_resource %}
+    <a href="{% url 'pages:resource-create' %}">Add resource</a>
+{% endif %}
         {% if perms.pages.view_resource %}
             <a href="{% url 'pages:resource-review' %}">Review</a>
         {% endif %}

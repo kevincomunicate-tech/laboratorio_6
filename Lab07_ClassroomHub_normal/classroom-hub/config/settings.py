@@ -1,3 +1,4 @@
+
 """
 Django settings for config project.
 
@@ -9,7 +10,8 @@ https://docs.djangoproject.com/en/6.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.1/ref/settings/
 """
-
+import pymysql
+pymysql.install_as_MySQLdb()
 import os
 from pathlib import Path
 
